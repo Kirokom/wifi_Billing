@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+.MainCOlor{
+    @apply  bg-gray-600 ;
+}
+.MainTextCOlor{
+    @apply  text-white ;
+}
