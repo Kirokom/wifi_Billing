@@ -3,13 +3,24 @@ import Tag from '../features/Tag'
 import NavItems from '../components/navItems/NavItems'
 
 const Sidebar = () => {
-    const [pageState , setPageState] = useState(false)
+    const [pageState , setPageState] = useState(true)
+    const [navBtnState , setNavBtnState] = useState(false)
+    const [hoverNav , setHoverNav] = useState(false)
 
 
     const handleMenu = () => {
         setPageState(!pageState)
     }
+
+    const handleNavBtn = () =>{
+      setNavBtnState(!navBtnState)
+    }
+
+    const hoverNavItemColorChange = ()=>{
+        setHoverNav(!hoverNav)
+    }
     
+  
   return (
     <div className={` w-64  h-full bg-gray-600 transition-all duration-400 ${pageState ? '-translate-x-[00px]': '-translate-x-[200px] absolute' }`}>
         <div className="header  flex p-5 items-center border-b border-gray-500 relative ">
@@ -46,15 +57,16 @@ const Sidebar = () => {
               /></div>
             </li>
 
-            <li className={` relative bg-gray-600 border-t cursor-pointer border-b group hover:bg-gray-500  border-gray-500 text-white ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
+            <li  onClick={handleNavBtn}  className={` relative bg-gray-600 border-t cursor-pointer border-b   border-gray-500 text-white ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
 
-                <div className='flex gap-3  items-center p-3'>
+                <div className={`flex gap-3  items-center p-3 ${h} `}>
                       {/* icon area  */}
                           <div className="icon">
                         <i class="fa-solid fa-sack-dollar"></i>
                           </div>
                           {/* main  text  */}
-                        <span className='font-light group-hover:font-bold'>Customer Billing</span>
+                        <span className='font-light group-hover:font-bold'>
+                          Customer Billing</span>
                 </div>
 
                         {/* for Tage use */}
@@ -65,7 +77,7 @@ const Sidebar = () => {
                 name={'Customer Billing'}
               /></div> 
                       {/* mav lInks */}
-                <div className='text-white '>
+                <div className={`  transition-all duration-300 ${navBtnState ? "block" : "hidden"}`}>
                   <NavItems/>
                 </div>
 
