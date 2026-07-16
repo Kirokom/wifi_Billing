@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Tag from '../features/Tag'
+import NavItems from '../components/navItems/NavItems'
 
 const Sidebar = () => {
     const [pageState , setPageState] = useState(false)
@@ -44,17 +45,30 @@ const Sidebar = () => {
                 name={'online Client Montioring'}
               /></div>
             </li>
-            <li className={` relative bg-gray-600 border-t cursor-pointer border-b group hover:bg-gray-500  border-gray-500 text-white flex gap-3 items-center p-3 ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
-              <div className="icon">
-            <i class="fa-solid fa-sack-dollar"></i>
-              </div>
-               <span className='font-light group-hover:font-bold'>Customer Billing</span>
+
+            <li className={` relative bg-gray-600 border-t cursor-pointer border-b group hover:bg-gray-500  border-gray-500 text-white ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
+
+                <div className='flex gap-3  items-center p-3'>
+                      {/* icon area  */}
+                          <div className="icon">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                          </div>
+                          {/* main  text  */}
+                        <span className='font-light group-hover:font-bold'>Customer Billing</span>
+                </div>
+
+                        {/* for Tage use */}
                  <div className="absolute hidden 
               group-hover:inline-block
               -right-12 translate-x-1/2 -translate-y-1/2 top-[50%]">
                <Tag 
                 name={'Customer Billing'}
-              /></div>
+              /></div> 
+                      {/* mav lInks */}
+                <div className='text-white '>
+                  <NavItems/>
+                </div>
+
             </li>
             
         </div>
