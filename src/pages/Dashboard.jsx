@@ -12,10 +12,10 @@ import TotalClient from '../components/card/TotalClient'
 const Dashboard = () => {
   return (
     <div className='bg-gray-600 h-full px-5 w-full'>
-     <div className=' rounded-md  pl-15 sm:px-20 sm:py-15  gap-2 sm:gap-5 w-full  h-full sm:h-[100vh]    grid grid-rows-2 '>
+     <div className=' rounded-md  pl-15 sm:px-20 sm:py-15  gap-2 sm:gap-5 w-full  min-h-full sm:h-[100vh]    grid grid-rows-2 '>
         
       {/* fonter section */}
-      <div className='grid  w-full grid-cols-1 sm:grid-cols-5 sm:gap-2 gap-5 pb-15   '>
+      <div className='grid   min-w-full grid-cols-1 lg:grid-cols-5 md:grid-cols-3 sm:gap-2 gap-5 pb-15  borders '>
           <div className='bg-gray-500/30 rounded-xl shadow-2xl '> 
           <div className='grid grid-cols-2'>
           <LiveClient/>
