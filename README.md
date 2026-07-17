@@ -16,7 +16,7 @@ VefifyEmail | NotFoundPage|
 ---------------------------
 Profile     | Supoort     |
 --------------------------- 
-Open Support Ticket       |
+Open Support | Ticket     |
 ---------------------------
 Add Fonts   | Add Shadow  |
 ---------------------------
