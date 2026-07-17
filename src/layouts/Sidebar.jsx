@@ -16,8 +16,8 @@ const Sidebar = () => {
       setNavBtnState(!navBtnState)
     }
 
-    const hoverNavItemColorChange = ()=>{
-        setHoverNav(!hoverNav)
+    const hoverNavItemColorChange = (e)=>{
+      console.log(e.target)
     }
     
   
@@ -31,11 +31,11 @@ const Sidebar = () => {
             </div>
         </div>
         <div className="Nav_links mt-15">
-            <li className={` relative bg-gray-600 border-t group hover:bg-gray-500 duration-100 cursor-pointer  border-gray-500 text-white flex ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2'} gap-3 items-center p-3`}>
+            <li className={` relative bg-gray-600 border-t group hover:bg-gray-700 duration-100 cursor-pointer  border-gray-500 text-white flex ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2'} gap-3 items-center p-3`}>
               <div className="icon ">
                 <i class="fa-regular fa-user"></i>
               </div>
-                <span className='font-light group-hover:font-bold'>Dashboard</span>
+                <span className='font-light group-hover:font-semibold'>Dashboard</span>
               <div className="absolute hidden 
               group-hover:inline-block
               -right-12 translate-x-1/2 -translate-y-1/2 top-[50%]">
@@ -43,12 +43,12 @@ const Sidebar = () => {
                 name={'Dashboard'}
               /></div>
             </li>
-             <li className={`relative bg-gray-600 border-t cursor-pointer border-b group hover:bg-gray-500  border-gray-500 text-white flex
+             <li className={`relative bg-gray-600 border-t cursor-pointer border-b group hover:bg-gray-700  border-gray-500 text-white flex
               gap-3 items-center p-3 ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2'}`}>
               <div className="icon">
                <i class="fa-solid fa-desktop"></i>
               </div>
-                <span className='font-light group-hover:font-bold'>Online Client Monitoring</span>
+                <span className='font-light group-hover:font-semibold'>Online Client Monitoring</span>
                 <div className="absolute hidden 
               group-hover:inline-block
               -right-12 translate-x-1/2 -translate-y-1/2 top-[50%]">
@@ -59,14 +59,18 @@ const Sidebar = () => {
 
             <li  onClick={handleNavBtn}  className={` relative bg-gray-600 border-t cursor-pointer border-b   border-gray-500 text-white ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
 
-                <div className={`flex gap-3  items-center p-3 ${h} `}>
+                <div className={`flex gap-3 relative items-center p-3 hover:bg-gray-700 group   `}>
                       {/* icon area  */}
                           <div className="icon">
                         <i class="fa-solid fa-sack-dollar"></i>
                           </div>
                           {/* main  text  */}
-                        <span className='font-light group-hover:font-bold'>
+                        <span className='font-light group-hover:font-semibold'>
                           Customer Billing</span>
+
+                        <div className='top-1/2 -translate-y-1/2 right-0  absolute'>
+                            {navBtnState ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-right"></i>}
+                        </div>
                 </div>
 
                         {/* for Tage use */}
@@ -76,9 +80,19 @@ const Sidebar = () => {
                <Tag 
                 name={'Customer Billing'}
               /></div> 
+                  {/* SIddebar Arrow */}
+                    
                       {/* mav lInks */}
                 <div className={`  transition-all duration-300 ${navBtnState ? "block" : "hidden"}`}>
-                  <NavItems/>
+                  <NavItems
+                  name = {"Biling List"}
+                  icon = {<i class="fa-regular fa-money-bill-1"></i>}
+                
+                  />
+                    <NavItems
+                  name = {"Customer List"}
+                  icon = {<i class="fa-regular fa-user"></i>}
+                  />
                 </div>
 
             </li>
