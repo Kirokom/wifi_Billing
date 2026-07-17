@@ -9,7 +9,7 @@
 <br/>
 
 ## adding new thing 
-------------|--------------
+
 Login page  | SingUp page |
 ---------------------------
 VefifyEmail | NotFoundPage|
