@@ -9,14 +9,10 @@
 <br/>
 
 ## adding new thing 
-
-Login page  | SingUp page |
----------------------------
-VefifyEmail | NotFoundPage|
----------------------------
-Profile     | Supoort     |
---------------------------- 
-Open Support | Ticket     |
----------------------------
-Add Fonts   | Add Shadow  |
----------------------------
+| | |
+| --- | --- |
+| Login page | SingUp page |
+| VefifyEmail | NotFoundPage |
+| Profile | Supoort |
+| Open Support Ticket | |
+| Add Fonts | Add Shadow |
