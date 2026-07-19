@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Tag from '../features/Tag'
 import NavItems from '../components/navItems/NavItems'
+import {NavLink} from "react-router-dom"
 
 const Sidebar = () => {
     const [pageState , setPageState] = useState(false)
@@ -64,7 +65,8 @@ const Sidebar = () => {
 
             <li  onClick={handleNavBtn}  className={` UnderShadow relative  transition-all duration-300 bg-gray-600 border-t cursor-pointer border-b   border-gray-500 text-white ${pageState ? ' ' : 'flex-row-reverse gap-10 mr-2 absolute'}` }>
 
-                <div className={`flex gap-3 relative items-center p-3 hover:bg-gray-700 group   `}>
+               <NavLink to="/CustomerBilling">
+                   <div className={`flex gap-3 relative items-center p-3 hover:bg-gray-700 group   `}>
                       {/* icon area  */}
                           <div className="icon hover:font-semibold">
                         <i class="fa-solid fa-sack-dollar"></i>
@@ -77,6 +79,7 @@ const Sidebar = () => {
                             {navBtnState ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-right"></i>}
                         </div>
                 </div>
+               </NavLink>
 
                         {/* for Tage use */}
                  <div className="absolute hidden 

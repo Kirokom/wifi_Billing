@@ -3,7 +3,44 @@ import React from 'react'
 const CustomerBilling = () => {
   return (
     <div>
-      
+      <div className='py-10 px-50  w-full mt-30 overflow-x-auto '>
+      <table className='border  shadow
+        [&_th]:border-2   [&_th]:text-white [&_th]:bg-gray-700  [&_th]:border-white/40 [&_th]:shadow [&_th]:text-sm [&_th]:p-1.5  [&_th]:capitalize 
+        [&_td]:border-2   [&_td]:text-gray-900  [&_td]:border-gray-900/40 [&_td]:text-[13px] [&_td]:shadow-2xl  [&_td]:p-1.5
+        _td]:capitalize 
+        '>
+        <thead>
+          <tr>
+            <th className='text-center'>name</th>
+            <th className='t'>UserName</th>
+            <th>number</th>
+            <th>area</th>
+            <th className='w-[15px]'>mbps</th>
+            <th>pack</th>
+            <th className='wrap-break-word w-[15px]'>exp date</th>
+            <th className='wrap-break-word w-[15px]'>recevied  </th>
+            <th className='w-[15px] text-center'>due </th>
+            <th>adv. </th>
+            <th>status </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>emon</td>
+            <td>1301@emon</td>
+            <td className='text-xs'>01721283081</td>
+            <td>Dokhin lalpur</td>
+            <td className='center'>5mb</td>
+            <td className='center'>pack-2</td>
+            <td className='center'>16</td>
+            <td className='center'>500</td>
+            <td></td>
+            <td></td>
+            <td>active</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     </div>
   )
 }
