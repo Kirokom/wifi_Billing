@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const CustomerBilling = () => {
+
+ const  [online , setOnline] = useState(false)
+
+  const Active = ()=>{
+      setOnline(!online)
+      console.log(online)
+  }
   return (
     <div>
       <div className='py-10 px-50  w-full mt-30 overflow-x-auto '>
@@ -18,10 +25,11 @@ const CustomerBilling = () => {
             <th className='w-[15px]'>mbps</th>
             <th>pack</th>
             <th className='wrap-break-word w-[15px]'>exp date</th>
-            <th className='wrap-break-word w-[15px]'>recevied  </th>
+            <th className='wrap-break-word w-[15px]'>rece.  </th>
             <th className='w-[15px] text-center'>due </th>
             <th>adv. </th>
             <th>status </th>
+            <th>Detall</th>
           </tr>
         </thead>
         <tbody>
@@ -36,7 +44,38 @@ const CustomerBilling = () => {
             <td className='center'>500</td>
             <td></td>
             <td></td>
-            <td>active</td>
+            <td  className='text-center '>
+              <div onClick={Active} className='text-xl cursor-pointer duration-1000 transition-all'>
+              {online ? <i class="fa-solid fa-toggle-on"></i> : <i class="fa-solid fa-toggle-off"></i>}
+              </div>
+            </td>
+             <td className='text-center text-2xl'>
+              <div className='text-md cursor-pointer'>
+                <i class="fa-regular fa-folder"></i>
+              </div>
+            </td>
+          </tr>
+            <tr>
+            <td>emon</td>
+            <td>1301@emon</td>
+            <td className='text-xs'>01721283081</td>
+            <td>Dokhin lalpur</td>
+            <td className='center'>5mb</td>
+            <td className='center'>pack-2</td>
+            <td className='center'>16</td>
+            <td className='center'>500</td>
+            <td></td>
+            <td></td>
+            <td  className='text-center '>
+              <div onClick={Active} className='text-xl cursor-pointer duration-1000 transition-all'>
+              {online ? <i class="fa-solid fa-toggle-on"></i> : <i class="fa-solid fa-toggle-off"></i>}
+              </div>
+            </td>
+            <td className='text-center '>
+              <div className='text-md cursor-pointer'>
+                <i class="fa-regular fa-folder"></i>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
