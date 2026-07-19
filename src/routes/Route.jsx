@@ -15,6 +15,7 @@ export const Router = createBrowserRouter([
         children : [
             {index : true , element: <Dashboard/> },
             {path:"/CustomerBilling" , element:<CustomerBilling/>}
+        
         ]
     }
 ])

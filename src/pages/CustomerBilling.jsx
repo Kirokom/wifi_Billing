@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CustomerBillinMonthDetall from './CustomerBillinMonthDetall'
 
 const CustomerBilling = () => {
 
@@ -72,9 +73,11 @@ const CustomerBilling = () => {
               </div>
             </td>
             <td className='text-center '>
-              <div className='text-md cursor-pointer'>
+              <NavLink to={'/customerMonthDetalls' , Element={ <CustomerBillinMonthDetall /> }} >
+                <div className='text-md cursor-pointer'>
                 <i class="fa-regular fa-folder"></i>
               </div>
+              </NavLink>
             </td>
           </tr>
         </tbody>
