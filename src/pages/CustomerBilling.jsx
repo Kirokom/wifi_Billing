@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CustomerBillinMonthDetall from './CustomerBillinMonthDetall'
+import { NavLink } from 'react-router-dom'
 
 const CustomerBilling = () => {
 
@@ -72,8 +73,8 @@ const CustomerBilling = () => {
               {online ? <i class="fa-solid fa-toggle-on"></i> : <i class="fa-solid fa-toggle-off"></i>}
               </div>
             </td>
-            <td className='text-center '>
-              <NavLink to={'/customerMonthDetalls' , Element={ <CustomerBillinMonthDetall /> }} >
+            <td className='text-center text-red-400 '>
+              <NavLink to={'/CustomerBillinMonthDetall'} element={<CustomerBillinMonthDetall/>} >
                 <div className='text-md cursor-pointer'>
                 <i class="fa-regular fa-folder"></i>
               </div>

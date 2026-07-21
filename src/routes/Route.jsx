@@ -5,6 +5,7 @@ import ClientMonitoringPage from "../pages/ClientMonitoringPage"
 import AddCustomer from "../components/AddCustomer"
 import NotFound from "../pages/NotFound"
 import CustomerBilling from "../pages/CustomerBilling"
+import CustomerBillinMonthDetall from "../pages/CustomerBillinMonthDetall"
 
 
 export const Router = createBrowserRouter([
@@ -14,7 +15,8 @@ export const Router = createBrowserRouter([
         errorElement : <NotFound/>,
         children : [
             {index : true , element: <Dashboard/> },
-            {path:"/CustomerBilling" , element:<CustomerBilling/>}
+            {path:"/CustomerBilling" , element:<CustomerBilling/>},
+            {path : "/CustomerBillinMonthDetall" , element:<CustomerBillinMonthDetall/>}
         
         ]
     }
